@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>DroidRemote3</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+  <div class="header">
+    <h1>Android Penn-Testing Framework Designed By: !nc0gn!t0 ©</h1>
+  </div>
+  <div class="content">
+    <h2>Welcome, {{ username }}</h2>
+    <form method="POST">
+      <button type="submit" name="start">Start</button>
+      <button type="submit" name="stop">Stop</button>
+      <button type="submit" name="file_transfer">File Transfer</button>
+      <button type="submit" name="file_explorer">File Explorer</button>
+      <button type="submit" name="mic_capture">Mic Capture</button>
+      <button type="submit" name="speak">Speak</button>
+      <button type="submit" name="qr_code">QR Code</button>
+      <button type="submit" name="notification">Notification</button>
+      <button type="submit" name="media_send">Media Send</button>
+    </form>
+  </div>
+</body>
+</html>
