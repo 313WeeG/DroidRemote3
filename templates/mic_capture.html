@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Mic Capture</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+  <div class="header">
+    <h1>Android Penn-Testing Framework Designed By: !nc0gn!t0 ©</h1>
+  </div>
+  <div class="content">
+    <h2>Mic Capture</h2>
+    <button onclick="startMic()">Start Mic</button>
+    <button onclick="stopMic()">Stop Mic</button>
+    <script>
+      function startMic() {
+        fetch('/start_mic');
+      }
+
+      function stopMic() {
+        fetch('/stop_mic');
+      }
+    </script>
+  </div>
+</body>
+</html>
