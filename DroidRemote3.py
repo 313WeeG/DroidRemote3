@@ -4,6 +4,9 @@ import os
 import re
 import paramiko
 import socket
+import qrcode
+from io import BytesIO
+from flask import send_file
 
 app = Flask(__name__)
 app.secret_key = "your_secret_key_here"
@@ -83,7 +86,25 @@ def speak():
 
 @app.route("/qr_code")
 def qr_code():
-    return render_template("qr_code.html")
+    qr = qrcode.QRCode(
+        version=1,
+        error_correction=qrcode.constants.ERROR_CORRECT_L,
+        box_size=10,
+        border=4,
+    )
+    qr.add_data("http://192.168.40.241:5000")
+    img = qr.make_image(fill_color="black", back_color="white")
+
+    img_buffer = BytesIO()
+    img.save(img_buffer, format="PNG")
+    img_buffer.seek(0)
+
+    return send_file(
+        img_buffer,
+        mimetype="image/png",
+        as_attachment=False,
+        download_name="qr_code.png"
+    )
 
 @app.route("/notification")
 def notification():
