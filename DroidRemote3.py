@@ -46,7 +46,7 @@ def index():
                     subprocess.run(["pkill", "scrcpy"])
                     return redirect(url_for("index"))
                 except Exception as e:
-                    return f"
+                    return f"Error: {e}"
 
             elif "file_transfer" in request.form:
                 file = request.files.get("file")
