@@ -12,7 +12,7 @@ A one-word command that works on both Linux and Termux. It provides:
 
 1. Run:
 
-curl -s https://raw.githubusercontent.com/yourusername/DroidRemote3/main/install.sh | bash
+curl -s https://raw.githubusercontent.com/313WeeG/DroidRemote3/main/install.sh | bash
 
 
 2. Access the web interface:
