@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Speak</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+  <div class="header">
+    <h1>Android Penn-Testing Framework Designed By: !nc0gn!t0 ©</h1>
+  </div>
+  <div class="content">
+    <h2>Speak</h2>
+    <input type="text" id="audio_file" placeholder="Enter audio file">
+    <button onclick="playAudio()">Play</button>
+    <script>
+      function playAudio() {
+        const file = document.getElementById("audio_file").value;
+        fetch('/speak', {
+          method: 'POST',
+          body: new URLSearchParams({ file: file })
+        });
+      }
+    </script>
+  </div>
+</body>
+</html>
