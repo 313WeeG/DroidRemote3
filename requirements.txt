@@ -1,1 +1,11 @@
-Requires Python, Flask, ADB, scrcpy, Frida, OpenSSH.
+Flask
+adb
+scrcpy
+frida
+openssh
+
+echo "Flask" > requirements.txt
+echo "adb" >> requirements.txt
+echo "scrcpy" >> requirements.txt
+echo "frida" >> requirements.txt
+echo "openssh" >> requirements.txt
