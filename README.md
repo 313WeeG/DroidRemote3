@@ -12,13 +12,21 @@ A one-word command that works on both Linux and Termux. It provides:
 
 1. Run:
 
-curl -s https://raw.githubusercontent.com/313WeeG/DroidRemote3/main/install.sh | bash
+git clone https://github.com/313WeeG/DroidRemote3.git
+
+python3 -m venv venv                                 
+source venv/bin/activate
+
+cd DroidRemote3     
+chmod +x install.sh     
+./install.sh
+
+python DroidRemote3.py
 
 
 2. Access the web interface:
 
 http://localhost:5000
 
-
-## Designed By
+ Designed By
 !nc0gn!t0 ©
