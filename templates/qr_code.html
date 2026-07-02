@@ -1,20 +1,10 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-  <meta charset="UTF-8">
-  <title>QR Code</title>
-  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <title>QR Code</title>
 </head>
 <body>
-  <div class="header">
-    <h1>Android Penn-Testing Framework Designed By: !nc0gn!t0 ©</h1>
-  </div>
-  <div class="content">
-    <h2>QR Code Pairing</h2>
-    <p>Scan the QR Code to pair with your Android device:</p>
-    <img src="{{ url_for('static', filename='qr_code.png') }}" alt="QR Code">
-    <button onclick="start_pairing()">Start Pairing</button>
-    <button onclick="start_6_digit()">6-Digit Code</button>
-  </div>
+    <h2>QR Code for Pairing</h2>
+    <img src="{{ url_for('qr_code') }}" alt="QR Code">
 </body>
 </html>
